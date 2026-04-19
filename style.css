@@ -4,22 +4,23 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: white;
-  transition: 0.3s;
-}
-
-.light {
-  background: #ffffff;
-  color: black;
+  overflow-x: hidden;
 }
 
 .profile-img {
-  width: 120px;
+  width: 180px;
   border-radius: 50%;
   margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
 .glass {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   background: rgba(255,255,255,0.05);
 }
 
@@ -42,6 +43,11 @@ nav {
   padding: 12px 25px;
   background: #38bdf8;
   border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .section {
@@ -51,8 +57,8 @@ nav {
 
 .projects-container {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -60,11 +66,16 @@ nav {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 15px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
 }
 
 .skill {
-  margin: 20px auto;
   width: 60%;
+  margin: auto;
 }
 
 .bar {
@@ -76,11 +87,10 @@ nav {
 .bar div {
   height: 10px;
   background: #38bdf8;
-  border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-  }
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
 }

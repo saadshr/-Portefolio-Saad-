@@ -1,7 +1,6 @@
 /* script.js */
-document.getElementById("theme-toggle").onclick = () => {
-  document.body.classList.toggle("light");
-};
+const toggle = document.getElementById("theme-toggle");
+toggle.onclick = () => document.body.classList.toggle("light");
 
 const faders = document.querySelectorAll('.fade');
 window.addEventListener('scroll', () => {
