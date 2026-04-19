@@ -4,6 +4,18 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: white;
+  transition: 0.3s;
+}
+
+.light {
+  background: #ffffff;
+  color: black;
+}
+
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .glass {
@@ -14,6 +26,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
 }
 
@@ -25,20 +38,10 @@ nav {
   text-align: center;
 }
 
-.hero h1 span {
-  color: #38bdf8;
-}
-
 .btn {
   padding: 12px 25px;
   background: #38bdf8;
   border-radius: 30px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0ea5e9;
-  transform: scale(1.05);
 }
 
 .section {
@@ -49,6 +52,7 @@ nav {
 .projects-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -56,9 +60,27 @@ nav {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 15px;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.skill {
+  margin: 20px auto;
+  width: 60%;
+}
+
+.bar {
+  background: #1e293b;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.bar div {
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+  }
 }
