@@ -1,30 +1,20 @@
 /* style.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
   color: white;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: #020617;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
 }
 
 .hero {
@@ -35,21 +25,40 @@ nav a {
   text-align: center;
 }
 
+.hero h1 span {
+  color: #38bdf8;
+}
+
 .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background: #38bdf8;
-  color: black;
-  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .projects-container {
   display: flex;
   gap: 20px;
-  padding: 20px;
+  justify-content: center;
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255,255,255,0.05);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
